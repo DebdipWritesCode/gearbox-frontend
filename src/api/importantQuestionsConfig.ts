@@ -6,4 +6,8 @@ export function getImportantQuestionsConfig() {
     .then((res) => res.json())
     .then(fetch)
     .then((res) => res.json() as Promise<ImportantQuestionConfig>)
+    .catch((error) => {
+      console.error('Error fetching important questions config:', error)
+      return { groups: [] } as ImportantQuestionConfig
+    })
 }
