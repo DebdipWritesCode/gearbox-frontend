@@ -8,6 +8,7 @@ import type {
   MatchFormValues,
   MatchFormConfig,
   ImportantQuestionConfig,
+  MatchFormFieldConfig,
 } from '../model'
 
 export type MatchFormProps = {
@@ -32,25 +33,34 @@ function MatchForm({
 
   const formEl = useRef<HTMLFormElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout | undefined>()
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const newValues = {
-      ...values,
-      [e.target.name]:
-        e.target.type === 'checkbox' ? e.target.checked : e.target.value,
+
+  const handleChange =
+    (fieldType: MatchFormFieldConfig['type']) =>
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (fieldType === 'checkbox' || fieldType === 'multiselect') {
+        // no render type for these two for now.
+        return
+      }
+      const { name, value } = e.target
+      const isNumberValue = fieldType === 'select' || fieldType === 'radio'
+      const isEmptyValue = !value
+      const newValues: MatchFormValues = {
+        ...values,
+        [name]: isEmptyValue ? undefined : isNumberValue ? +value : value,
+      }
+      setValues(newValues)
+
+      if (timeoutRef.current !== undefined) clearTimeout(timeoutRef.current)
+
+      if (formEl?.current?.reportValidity()) {
+        setIsUpdating(true)
+        timeoutRef.current = setTimeout(() => {
+          updateMatchInput(clearShowIfField(config, newValues))
+          setIsUpdating(false)
+          clearTimeout(timeoutRef.current)
+        }, 1000)
+      } else setIsUpdating(false)
     }
-    setValues(newValues)
-
-    if (timeoutRef.current !== undefined) clearTimeout(timeoutRef.current)
-
-    if (formEl?.current?.reportValidity()) {
-      setIsUpdating(true)
-      timeoutRef.current = setTimeout(() => {
-        updateMatchInput(clearShowIfField(config, newValues))
-        setIsUpdating(false)
-        clearTimeout(timeoutRef.current)
-      }, 1000)
-    } else setIsUpdating(false)
-  }
 
   // Separate important fields from the rest
   const importantFields = config.fields.filter((field) =>
@@ -84,7 +94,7 @@ function MatchForm({
                   disabled: !relevant,
                 }}
                 value={values[id]}
-                onChange={handleChange}
+                onChange={handleChange(fieldConfig.type)}
               />
             </FieldWrapper>
           )
@@ -123,7 +133,7 @@ function MatchForm({
                       disabled: !relevant,
                     }}
                     value={values[id]}
-                    onChange={handleChange}
+                    onChange={handleChange(fieldConfig.type)}
                   />
                 </FieldWrapper>
               )
