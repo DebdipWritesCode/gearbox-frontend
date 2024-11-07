@@ -49,9 +49,8 @@ export function useQueryBuilderState(
       .then((sv) => {
         setStudyVersion(sv)
         const {
-          eligibility_criteria_infos: [
-            { eligibility_criteria_id: ecId, study_algorithm_engine_id: saId },
-          ],
+          eligibility_criteria_id: ecId,
+          study_algorithm_engine_id: saId,
         } = sv
         getEligibilityCriteriaById(ecId).then((criteria) => {
           const queryBuilderConfig = getQueryBuilderConfig(

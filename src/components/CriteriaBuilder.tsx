@@ -19,10 +19,7 @@ export function CriteriaBuilder({
   studyVersions: StudyVersion[]
   setStudyVersions: (svs: StudyVersion[]) => void
 }) {
-  const {
-    study,
-    eligibility_criteria_infos: [{ eligibility_criteria_id, status }],
-  } = studyVersion
+  const { study, eligibility_criteria_id, status } = studyVersion
   const matchInfoId = `match-info-${study.id}`
 
   const [showModal, openModal, closeModal] = useModal()
