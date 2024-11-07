@@ -18,13 +18,9 @@ export type Study = {
 export type StudyVersion = {
   id: number
   study_version: number
-  eligibility_criteria_infos: [
-    {
-      study_algorithm_engine_id: number | null
-      eligibility_criteria_id: number
-      status: StudyVersionStatus
-    }
-  ]
+  status: StudyVersionStatus
+  eligibility_criteria_id: number
+  study_algorithm_engine_id: number | null
   study: Study
 }
 
@@ -51,6 +47,7 @@ export type MatchCondition = {
 
 export type StudyAlgorithmEngine = {
   id: number
+  study_version_id: number
   algorithm_logic: MatchAlgorithm
 }
 

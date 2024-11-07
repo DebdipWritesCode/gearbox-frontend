@@ -50,13 +50,11 @@ export function CriteriaBuilderModal({
       const studyAlgorithm = queryBuilderValueToAlgorithm(
         QbUtils.getTree(queryBuilderState.tree) as JsonGroup
       )
-      const studyAlgorithmId =
-        studyVersion.eligibility_criteria_infos[0].study_algorithm_engine_id ||
-        0
-      const eligibilityCriteriaId =
-        studyVersion.eligibility_criteria_infos[0].eligibility_criteria_id
+      const studyAlgorithmId = studyVersion.study_algorithm_engine_id || 0
+      const eligibilityCriteriaId = studyVersion.eligibility_criteria_id
       const studyAlgorithmEngine: StudyAlgorithmEngine = {
         id: studyAlgorithmId,
+        study_version_id: studyVersion.id,
         algorithm_logic: studyAlgorithm,
       }
       const saveResponse = studyAlgorithmId
