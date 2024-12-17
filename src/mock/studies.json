@@ -16,7 +16,13 @@
     "id": 2,
     "name": "Study of Selinexor and Venetoclax in Combination With Chemotherapy in Pediatric and Young Adult Patients With Refractory or Relapsed Acute Myeloid Leukemia",
     "code": "SELCLAX",
-    "sites": [{"id": 1, "name": "St. Jude Children's Research Hospital", "active": true}],
+    "sites": [
+      {
+        "id": 1,
+        "name": "St. Jude Children's Research Hospital",
+        "active": true
+      }
+    ],
     "links": [
       {
         "name": "ClinicalTrials.gov",
@@ -30,10 +36,26 @@
     "name": "Study of Venetoclax in Combination With Chemotherapy in Pediatric Patients With Refractory or Relapsed Acute Myeloid Leukemia or Acute Leukemia of Ambiguous Lineage",
     "code": "VENAML",
     "sites": [
-      {"id": 2, "name": "Children's Hospital of Orange County", "active":  true},
-      {"id": 3, "name": "Lucille Packard Children's Hospital Stanford University", "active":  true},
-      {"id": 4, "name": "UNC Lineberger Comprehensive Cancer Center", "active":  true},
-      {"id": 1, "name": "St. Jude Children's Research Hospital", "active":  true}
+      {
+        "id": 2,
+        "name": "Children's Hospital of Orange County",
+        "active": true
+      },
+      {
+        "id": 3,
+        "name": "Lucille Packard Children's Hospital Stanford University",
+        "active": true
+      },
+      {
+        "id": 4,
+        "name": "UNC Lineberger Comprehensive Cancer Center",
+        "active": true
+      },
+      {
+        "id": 1,
+        "name": "St. Jude Children's Research Hospital",
+        "active": true
+      }
     ],
     "links": [
       {
@@ -48,14 +70,34 @@
     "name": "Epigenetic Reprogramming in Relapse/Refractory AML",
     "code": "T2016-003",
     "sites": [
-      {"id": 2, "name": "Children's Hospital of Orange County", "active":  true},
-      {"id": 3, "name": "Lucille Packard Children's Hospital Stanford University", "active":  true},
-      {"id": 4, "name": "UNC Lineberger Comprehensive Cancer Center", "active":  true},
-      {"id": 1, "name": "St. Jude Children's Research Hospital", "active":  true},
-      {"id": 5, "name": "Children's Hospital Los Angeles", "active":  true},
-      {"id": 6, "name": "UCSF School of Medicine", "active":  true},
-      {"id": 7, "name": "The Children's Hospital, University of Colorado", "active":  true},
-      {"id": 8, "name": "Children's National Medical Center", "active":  true}
+      {
+        "id": 2,
+        "name": "Children's Hospital of Orange County",
+        "active": true
+      },
+      {
+        "id": 3,
+        "name": "Lucille Packard Children's Hospital Stanford University",
+        "active": true
+      },
+      {
+        "id": 4,
+        "name": "UNC Lineberger Comprehensive Cancer Center",
+        "active": true
+      },
+      {
+        "id": 1,
+        "name": "St. Jude Children's Research Hospital",
+        "active": true
+      },
+      { "id": 5, "name": "Children's Hospital Los Angeles", "active": true },
+      { "id": 6, "name": "UCSF School of Medicine", "active": true },
+      {
+        "id": 7,
+        "name": "The Children's Hospital, University of Colorado",
+        "active": true
+      },
+      { "id": 8, "name": "Children's National Medical Center", "active": true }
     ],
     "links": [
       {
@@ -69,7 +111,9 @@
     "id": 6,
     "name": "Liposomal Cytarabine, Daunorubicin, and Gemtuzumab Ozogamicin for the Treatment of Relapsed Refractory Pediatric Patients With Acute Myeloid Leukemia",
     "code": "2020-0484",
-    "sites": [{"id": 9, "name": "M D Anderson Cancer Center", "active": true}],
+    "sites": [
+      { "id": 9, "name": "M D Anderson Cancer Center", "active": true }
+    ],
     "links": [
       {
         "name": "ClinicalTrials.gov",
@@ -82,7 +126,13 @@
     "id": 7,
     "name": "CD123 Redirected T Cells for AML in Pediatric Subjects",
     "code": "834675",
-    "sites": [{"id": 10, "name": "Children's Hospital of Philadelphia", "active": true}],
+    "sites": [
+      {
+        "id": 10,
+        "name": "Children's Hospital of Philadelphia",
+        "active": true
+      }
+    ],
     "links": [
       {
         "name": "ClinicalTrials.gov",
@@ -108,7 +158,7 @@
     "id": 9,
     "name": "Niclosamide in Pediatric Patients With Relapsed and Refractory AML",
     "code": "PEDSHEMAML0007",
-    "sites": [{"id": 11, "name": "Stanford University", "active": true}],
+    "sites": [{ "id": 11, "name": "Stanford University", "active": true }],
     "links": [
       {
         "name": "ClinicalTrials.gov",
@@ -121,7 +171,7 @@
     "id": 10,
     "name": "Relapsed Pediatric AML to Determine the Safety and Efficacy of the PARP Inhibitor Talazoparib in Combination With Conventional Chemotherapy (PARPAML)",
     "code": "PEDSHEMAML0008",
-    "sites": [{"id": 11, "name": "Stanford University", "active": true}],
+    "sites": [{ "id": 11, "name": "Stanford University", "active": true }],
     "links": [
       {
         "name": "ClinicalTrials.gov",
