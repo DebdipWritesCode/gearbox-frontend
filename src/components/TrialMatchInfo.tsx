@@ -8,7 +8,7 @@ import {
   Zap,
   ZapOff,
 } from 'react-feather'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import type { MatchInfoAlgorithm, Study } from '../model'
 import MatchInfoDetails from './MatchInfoDetails'
 import { useModal } from '../hooks/useModal'
@@ -89,12 +89,11 @@ function TrialMatchInfo({ study, studyMatchInfo }: TrialMatchInfoProps) {
                     >
                       <MoreHorizontal className="inline" />
                       <ReactTooltip
-                        border
-                        borderColor="black"
+                        border="1px solid black"
                         id="match-form-menu"
-                        effect="solid"
                         place="left"
-                        type="light"
+                        // effect="solid"
+                        // type="light"
                       >
                         <span>Options</span>
                       </ReactTooltip>
@@ -122,12 +121,11 @@ function TrialMatchInfo({ study, studyMatchInfo }: TrialMatchInfoProps) {
                               <span className="mx-2">Filter criteria</span>
                             </button>
                             <ReactTooltip
-                              border
-                              borderColor="black"
+                              border="1px solid black"
                               id="match-form-filter"
-                              effect="solid"
                               place="bottom"
-                              type="light"
+                              // effect="solid"
+                              // type="light"
                             >
                               <div style={{ maxWidth: '200px' }}>
                                 Filter to display the relevant criteria only or
@@ -150,12 +148,11 @@ function TrialMatchInfo({ study, studyMatchInfo }: TrialMatchInfoProps) {
                               <span className="mx-2">Highlight status</span>
                             </button>
                             <ReactTooltip
-                              border
-                              borderColor="black"
+                              border="1px solid black"
                               id="match-form-highlight"
-                              effect="solid"
                               place="bottom"
-                              type="light"
+                              // effect="solid"
+                              // type="light"
                             >
                               <div style={{ maxWidth: '200px' }}>
                                 Highlight relevant criteria if match status is
@@ -188,10 +185,9 @@ function TrialMatchInfo({ study, studyMatchInfo }: TrialMatchInfoProps) {
       ) : (
         <ReactTooltip
           id={matchInfoId}
-          border
-          borderColor="black"
-          effect="solid"
-          type="light"
+          border="1px solid black"
+          // effect="solid"
+          // type="light"
         >
           <span>Click to see Eligibility Criteria</span>
         </ReactTooltip>

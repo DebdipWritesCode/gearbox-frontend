@@ -61,7 +61,7 @@ export function QuestionEditorPage() {
     loadMatchForm()
     return () => {
       if (timerIdRef.current) {
-        clearTimeout(timerIdRef.current)
+        clearTimeout(timerIdRef.current as unknown as number)
       }
     }
   }, [])

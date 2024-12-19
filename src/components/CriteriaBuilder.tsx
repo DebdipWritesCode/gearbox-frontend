@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MatchingPageProps } from '../pages/MatchingPage'
 import { Check, Edit } from 'react-feather'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { StudyVersion } from '../model'
 import { useModal } from '../hooks/useModal'
 import { CriteriaBuilderModal } from './CriteriaBuilderModal'
@@ -77,10 +77,9 @@ export function CriteriaBuilder({
       ) : (
         <ReactTooltip
           id={matchInfoId}
-          border
-          borderColor="black"
-          effect="solid"
-          type="light"
+          border="1px solid black"
+          // effect="solid"
+          // type="light"
         >
           <span>Click to edit Eligibility Criteria</span>
         </ReactTooltip>

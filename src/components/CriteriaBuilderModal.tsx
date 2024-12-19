@@ -80,7 +80,7 @@ export function CriteriaBuilderModal({
   useEffect(
     () => () => {
       if (timerIdRef.current) {
-        clearTimeout(timerIdRef.current)
+        clearTimeout(timerIdRef.current as unknown as number)
       }
     },
     []

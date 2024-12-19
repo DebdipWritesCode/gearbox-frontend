@@ -6,7 +6,7 @@ import {
   ToggleLeft,
   ToggleRight,
 } from 'react-feather'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Button from '../components/Inputs/Button'
 import MatchForm from '../components/MatchForm'
 import MatchResult from '../components/MatchResult'
@@ -200,12 +200,11 @@ function MatchingPage({ action, state, status }: MatchingPageProps) {
               >
                 <MoreHorizontal className="inline" size="1rem" />
                 <ReactTooltip
-                  border
-                  borderColor="black"
+                  border="1px solid black"
                   id="match-form-menu"
-                  effect="solid"
                   place="bottom"
-                  type="light"
+                  // effect="solid"
+                  // type="light"
                 >
                   <span>Options</span>
                 </ReactTooltip>
@@ -229,11 +228,10 @@ function MatchingPage({ action, state, status }: MatchingPageProps) {
                       </button>
                       <ReactTooltip
                         id="match-form-filter"
-                        border
-                        borderColor="black"
-                        effect="solid"
+                        border="1px solid black"
                         place="right"
-                        type="light"
+                        // effect="solid"
+                        // type="light"
                       >
                         <div style={{ maxWidth: '100px' }}>
                           Filter to display the relevant questions only or see
@@ -301,12 +299,11 @@ function MatchingPage({ action, state, status }: MatchingPageProps) {
             >
               <MoreHorizontal className="inline" size="1rem" />
               <ReactTooltip
-                border
-                borderColor="black"
+                border="1px solid black"
                 id="match-form-menu"
-                effect="solid"
                 place="left"
-                type="light"
+                // effect="solid"
+                // type="light"
               >
                 <span>Options</span>
               </ReactTooltip>
@@ -329,12 +326,11 @@ function MatchingPage({ action, state, status }: MatchingPageProps) {
                       <span className="mx-2">Filter questions</span>
                     </button>
                     <ReactTooltip
-                      border
-                      borderColor="black"
+                      border="1px solid black"
                       id="match-form-filter"
-                      effect="solid"
                       place="left"
-                      type="light"
+                      // effect="solid"
+                      // type="light"
                     >
                       <div style={{ maxWidth: '200px' }}>
                         Filter to display the relevant questions only or see all
