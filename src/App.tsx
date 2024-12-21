@@ -18,7 +18,7 @@ import useGearboxData from './hooks/useGearboxData'
 import { useGoogleAnalytics } from './hooks/useGoogleAnalytics'
 import { ErrorRetry } from './components/ErrorRetry'
 import { AdminPage } from './pages/AdminPage'
-import { QuestionEditorPage } from './pages/QuestionEditorPage'
+import QuestionEditorPage from './pages/QuestionEditorPage'
 
 function App() {
   const auth = useAuth()
